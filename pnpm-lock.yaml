@@ -11,6 +11,9 @@ importers:
       daisyui:
         specifier: ^5.7.50
         version: 5.7.50
+      svelte-heros-v2:
+        specifier: ^3.0.1
+        version: 3.0.1(svelte@5.57.2)
     devDependencies:
       '@playwright/test':
         specifier: ^1.60.0
@@ -715,6 +718,11 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: ^5.0.0 || ^6.0.0
 
+  svelte-heros-v2@3.0.1:
+    resolution: {integrity: sha512-UT8pyFv7MQgJSiLJ9p7gRsVeGF+6QFHZ72cPOjoKCG0nGk+cPreQvd3zbiBAv9vr5+C1D0GXuvzJlIl5FSpxLA==}
+    peerDependencies:
+      svelte: ^5.0.0
+
   svelte@5.57.2:
     resolution: {integrity: sha512-1YiPCAXT0Ct6g1vOMmSLa0Nsc3QRMvtDF32ihgglGVrugIuIK38RyDiFNXVDhtQ81TJjSO57NdMw6DyYLqSGDQ==}
     engines: {node: '>=18'}
@@ -1238,6 +1246,10 @@ snapshots:
       typescript: 6.0.3
     transitivePeerDependencies:
       - picomatch
+
+  svelte-heros-v2@3.0.1(svelte@5.57.2):
+    dependencies:
+      svelte: 5.57.2
 
   svelte@5.57.2:
     dependencies:
