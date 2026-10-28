@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@plugin 'daisyui';
+@theme {
+	--font-sans: 'Inter Variable', sans-serif;
+}
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';

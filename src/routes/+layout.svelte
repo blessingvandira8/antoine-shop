@@ -1,0 +1,17 @@
+<script lang="ts">
+import '@fontsource-variable/inter'
+	import './layout.css';
+	import DemoLinks from './demo/DemoLinks.svelte';
+	import favicon from '#lib/assets/favicon.svg';
+	import type { LayoutProps } from './$types';
+	import Navbar from '#lib/components/Navbar.svelte';
+
+	let { children }: LayoutProps = $props();
+</script>
+
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+<Navbar />
+{@render children()}
+<DemoLinks />
