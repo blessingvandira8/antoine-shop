@@ -1,7 +1,6 @@
 <script lang="ts">
-import '@fontsource-variable/inter'
+	import '@fontsource-variable/inter';
 	import './layout.css';
-	import DemoLinks from './demo/DemoLinks.svelte';
 	import favicon from '#lib/assets/favicon.svg';
 	import type { LayoutProps } from './$types';
 	import Navbar from '#lib/components/Navbar.svelte';
@@ -14,4 +13,3 @@ import '@fontsource-variable/inter'
 </svelte:head>
 <Navbar />
 {@render children()}
-<DemoLinks />

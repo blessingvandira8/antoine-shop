@@ -9,7 +9,13 @@
 <div class="mx-auto max-w-xl p-6">
 	<a href="/" class="btn mb-4 btn-ghost btn-sm"> <ArrowLeft class="h-4 w-4" />Back to products</a>
 	<div class="md card bg-base-100 shadow">
-		<figure class="bg-base-200-py-16 text-8xl">{data.product.emoji}</figure>
+		<figure>
+			<img
+				src={data.product.image}
+				alt={data.product.name}
+				class="aspect-square w-full object-cover"
+			/>
+		</figure>
 		<div class="card-body">
 			<div class="badge badge-outline">{data.product.category}</div>
 			<h1 class="card-title text-3xl">{data.product.name}</h1>

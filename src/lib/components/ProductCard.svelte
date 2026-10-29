@@ -9,7 +9,14 @@
 </script>
 
 <div class="shadow-mid card bg-base-100">
-	<figure class="bg-base-200 py-10 text-7xl">{product.emoji}</figure>
+	<figure>
+		<img
+			src={product.image}
+			alt={product.name}
+			loading="lazy"
+			class="aspect-square w-full object-cover"
+		/>
+	</figure>
 	<div class="card-body">
 		<div class="badge badge-outline">{product.category}</div>
 		<h2 class="card-title">
