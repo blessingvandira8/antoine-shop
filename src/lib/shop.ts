@@ -10,3 +10,6 @@ export const shop = {
 		'Tell us your town and we will confirm the delivery cost and time.'
 	]
 };
+export function whatsappLink(text: string) {
+	return `https://wa.me/${shop.whatsapp}?text=${encodeURIComponent(text)}`;
+}
