@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Product } from '#lib/types.ts';
+	import StarRating from './StarRating.svelte';
 
 	interface Props {
 		product: Product;
@@ -24,8 +25,19 @@
 		</h2>
 		<p>{product.description}</p>
 		<div class="item-center card-actions justify-between">
-			<span class="text-lg font-bold">${product.price}</span>
-			<button class="btn btn-primary btn-sm" onclick={() => onadd(product)}> Add to Cart </button>
+			<div class="item-center card-actions justify-between">
+				<div>
+					<span class="text-lg font-bold">${product.price}</span>
+					<StarRating rating={product.rating} />
+				</div>
+				<button
+					class="btn btn-primary btn-sm"
+					disabled={product.stock === 0}
+					onclick={() => onadd(product)}
+				>
+					{product.stock === 0 ? `Sold out` : `Add to Cart`}
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
